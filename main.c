@@ -9,24 +9,20 @@ typedef struct {
     int dificulty;
 }Sudoku;
 
-// Function declarations
-void clearScreen();
-int** createBoard(int size);
-void freeBoard(int** board, int size);
-void printBoard(int** board, int size);
-bool isNumberValid(int** board, int size, int row, int col, int num);
-bool findEmptyCell(int** board, int size, int* row, int* col);
-bool isBoardSolved(int** board, int size);
-bool solveBoard(int** board, int size);
-void removeCells(int** board, int size, int percentage);
-void playGame(int** board, int size);
-void saveGame(int** board, int size);
-void loadGame();
-void showInstructions();
-int getBoardSize();
-int getDifficultyLevel();
-
 int** board = NULL;
+
+void clear();
+int** createboard(int size);
+void freeboard(int** board, int size);
+void print_board(int** board, int size);
+void savegame(int** board, int size);
+int available_place(int** board, int size, int row, int col, int num);
+int findempty(int** board, int size, int *row, int *col);
+bool issolved(int** board, int size);
+int solvedboard(int** board, int size); // ← TO DODAJ!
+void removecells(int** board, int size, int percentage);
+void userinput(int** board, int size);
+void loadgame();
 
 //method for clear cmd
 void clear() {
@@ -244,7 +240,7 @@ void userinput(int** board, int size)
             continue;
         }
         
-        if (row == 0 || col == 0 && num == 0)
+        if (row == 0 && col == 0 && num == 0)
             break;
         if(row>size || row<1 || col>size || col<1 || num>size || num<1)
         {
@@ -401,6 +397,7 @@ while(!end)
                 removecells(board, size, dificulty);
                 print_board(board, size);
                 userinput(board, size);
+                return 0;
                 break;
             case 2:
                 loadgame();
@@ -413,11 +410,11 @@ while(!end)
                 printf("Sudoku is a logic puzzle where you fill in a grid so that every row, column, and marked region contains all the required numbers without repeating. I offer three different grid sizes and difficulty levels, making it fun for both beginners and experienced players. Just choose your preferred size and difficulty, and start solving! \n");
                 printf("1. Write 1 to 'Start Game' \n");
                 printf("2. Choose your board size. 1 is for 4x4 2 is for 9x9 and 3 is for 16x16 \n");
-                printf("3. Choose your level. 1 is for easy 25% 2 is for medium 55% and 3 is for hard% \n");
+                printf("3. Choose your level. 1 is for easy 35% 2 is for medium 55% and 3 is for hard 70% \n");
                 printf("4. Board will generate for you\n");
                 printf("5. Write row + lap + number where you want\n");
                 printf("6. Program will automaticaly check if you did it wrong\n");
-                printf("7. write '-1 -2 -3' if you want save game to file\n");
+                printf("7. write '-1 -1 -1' if you want save game to file\n");
                 printf("7. write '0 0 0' if you want leave game\n");
                 printf("8. Have fun :)\n");
                 printf("Click Enter, to continue...");
