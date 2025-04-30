@@ -25,4 +25,5 @@ You can save and play later :)
 
 Have fun :D
 
-https://media1.giphy.com/media/beorHuw3tM7tcAFB0v/giphy.gif?cid=6c09b952vdhn4s8pxxj2xaghsco5n0k9yxx44l8p14bma6b2&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g
+![image](https://github.com/user-attachments/assets/1a13cb44-b5c1-4c27-b817-bea730576bed)
+
