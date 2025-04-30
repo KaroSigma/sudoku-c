@@ -24,3 +24,5 @@ Game:
 You can save and play later :)
 
 Have fun :D
+
+https://media1.giphy.com/media/beorHuw3tM7tcAFB0v/giphy.gif?cid=6c09b952vdhn4s8pxxj2xaghsco5n0k9yxx44l8p14bma6b2&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g
