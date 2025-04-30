@@ -12,9 +12,13 @@ User input system: Accepts player moves and validates them against Sudoku rules.
 Game state saving/loading: Allows players to save the game (-1 -2 -3) or quit (0 0 0).
 
 Menu:
+
+
 ![image](https://github.com/user-attachments/assets/c66e23d3-62e8-4150-9483-4990e2fb7d81)
 
-Game: 
+Game:
+
+
 ![image](https://github.com/user-attachments/assets/1865a61f-0f86-4953-bf07-4a1281af23bd)
 
 You can save and play later :)
